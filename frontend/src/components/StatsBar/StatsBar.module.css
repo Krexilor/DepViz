@@ -1,0 +1,92 @@
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    height: 52px;
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.stat {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+}
+
+.statVal {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.statLabel {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.high { color: var(--risk-high); }
+.medium { color: var(--risk-medium); }
+.clean { color: var(--risk-low); }
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.healthBadge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+}
+
+.unhealthy {
+    color: var(--risk-high);
+    background: var(--risk-high-bg);
+    border: 1px solid var(--risk-high-border);
+}
+
+.healthy {
+    color: var(--risk-low);
+    background: var(--risk-low-bg);
+    border: 1px solid var(--risk-low-border);
+}
+
+.resetBtn {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-secondary);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition);
+}
+
+.resetBtn:hover {
+    color: var(--text-primary);
+    border-color: var(--border-hover);
+}

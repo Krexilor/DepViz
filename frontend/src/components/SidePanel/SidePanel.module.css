@@ -1,0 +1,170 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    background: var(--bg-2);
+    border-left: 1px solid var(--border);
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 100%;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-align: center;
+    padding: 24px;
+}
+
+.emptyIcon {
+    font-size: 28px;
+    color: var(--border-hover);
+}
+
+.header {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pkgName {
+    font-family: var(--font-mono);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-primary);
+    word-break: break-all;
+    line-height: 1.3;
+    margin-top: 6px;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.version {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.ecosystem {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.directBadge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--accent);
+    background: var(--accent-glow);
+    border: 1px solid var(--accent-dim);
+    border-radius: 4px;
+    padding: 2px 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.riskBadge {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+}
+
+.high { color: var(--risk-high); background: var(--risk-high-bg); border: 1px solid var(--risk-high-border); }
+.medium { color: var(--risk-medium); background: var(--risk-medium-bg); border: 1px solid var(--risk-medium-border); }
+.low { color: var(--risk-low); background: var(--risk-low-bg); border: 1px solid var(--risk-low-border); }
+.clean { color: var(--risk-low); background: var(--risk-low-bg); border: 1px solid var(--risk-low-border); }
+
+.section {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cveList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cveCard {
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cveTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.cveId {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--risk-high);
+    font-weight: 500;
+}
+
+.cvssScore {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+}
+
+.cvssScore.high { color: var(--risk-high); background: var(--risk-high-bg); }
+.cvssScore.medium { color: var(--risk-medium); background: var(--risk-medium-bg); }
+.cvssScore.low { color: var(--risk-low); background: var(--risk-low-bg); }
+
+.cveDesc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.fixedVersion {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.fixedVersion code {
+    font-family: var(--font-mono);
+    color: var(--risk-low);
+}
+
+.cleanMsg {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--risk-low);
+}
