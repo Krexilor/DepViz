@@ -3,31 +3,30 @@ from enum import Enum
 from typing import Optional
 from pydantic import BaseModel
 
-# MODELS -------------------------------------------------------------------------------------------------------------------------------------------|
-
-# (1) Risk Levels
+# RISK LEVEL ---------------------------------------------------------------------------------------------------------------------------------------|
 class RiskLevel(str, Enum):
     HIGH = "high"
     MEDIUM = "medium"
     LOW = "low"
     NONE = "none"
 
-# (2) Ecosystem
+# ECOSYSTEM ----------------------------------------------------------------------------------------------------------------------------------------|
 class EcosystemType(str, Enum):
     PIP = "pip"
     NPM = "npm"
     CARGO = "cargo"
     GO = "go"
+    GEM = "gem"
 
-# (3) CVE 
+# CVE ----------------------------------------------------------------------------------------------------------------------------------------------|
 class CVE(BaseModel):
     id: str
     description: str
     severity: str
     cvss: Optional[float] = None
-    fixed_version: Optional[str] = None
+    fixed_version: Optional[str]  = None
 
-# (4) Node
+# NODE ---------------------------------------------------------------------------------------------------------------------------------------------|
 class Node(BaseModel):
     id: str
     version: str
@@ -36,12 +35,12 @@ class Node(BaseModel):
     cves: list[CVE] = []
     is_direct: bool = False
 
-# (5) Edge
+# EDGE ---------------------------------------------------------------------------------------------------------------------------------------------|
 class Edge(BaseModel):
     source: str
     target: str
 
-# (6) Graph Response
+# GRAPH RESPONSE -----------------------------------------------------------------------------------------------------------------------------------|
 class GraphResponse(BaseModel):
     nodes: list[Node]
     edges: list[Edge]

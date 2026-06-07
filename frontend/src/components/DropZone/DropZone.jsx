@@ -5,9 +5,9 @@ import { useState, useRef } from 'react'
 import styles from './DropZone.module.css'
 
 // SUPPORTED FILES ---------------------------------------------------------------------------------------------------------------------------------|
-const SUPPORTED = ['requirements.txt', 'pyproject.toml', 'package.json']
+const SUPPORTED = ['requirements.txt', 'pyproject.toml', 'package.json', 'Cargo.toml', 'go.mod', 'Gemfile']
 
-// DROPZONE COMPONENT ------------------------------------------------------------------------------------------------------------------------------|
+// COMPONENT ---------------------------------------------------------------------------------------------------------------------------------------|
 export default function DropZone({ onUpload }) {
 
     const [dragging, setDragging] = useState(false)
@@ -47,7 +47,6 @@ export default function DropZone({ onUpload }) {
     return (
         <div className = {styles.wrapper}>
 
-            {/* DROP AREA */}
             <div
                 className = {`${styles.dropzone} ${dragging ? styles.dragging : ''}`}
                 onDragOver = {onDragOver}
@@ -79,14 +78,12 @@ export default function DropZone({ onUpload }) {
                 </p>
             </div>
 
-            {/* SUPPORTED BADGES */}
             <div className = {styles.badges}>
                 {SUPPORTED.map(name => (
                     <span key = {name} className = {styles.badge}>{name}</span>
                 ))}
             </div>
 
-            {/* INLINE FILE ERROR */}
             {fileError && (
                 <p className = {styles.error}>{fileError}</p>
             )}
