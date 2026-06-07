@@ -2,7 +2,11 @@
 
 Upload a dependency file and instantly get an interactive graph of your entire package tree — with live CVE vulnerability data from [OSV.dev](https://osv.dev).
 
-![depviz preview](https://raw.githubusercontent.com/Krexilor/depviz/main/preview.png)
+- Main Page
+![depviz preview](https://github.com/Krexilor/DepViz/blob/main/assets/MainPage.png?raw=true)
+
+- Graph Tree
+![depviz preview](https://github.com/Krexilor/DepViz/blob/main/assets/GraphTree.png?raw=true)
 
 ---
 
