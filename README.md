@@ -80,8 +80,8 @@ Parses `gem` declarations and skips `group` blocks, `source` lines, and Ruby ver
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/Krexilor/depviz.git
-cd depviz
+git clone https://github.com/Krexilor/DepViz.git
+cd DepViz
 ```
 
 ### 2. Backend
